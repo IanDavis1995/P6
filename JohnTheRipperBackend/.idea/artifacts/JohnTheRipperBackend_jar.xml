@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="JohnTheRipperBackend:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JohnTheRipperBackend_jar</output-path>
+    <root id="archive" name="JohnTheRipperBackend.jar">
+      <element id="module-output" name="JohnTheRipperBackend" />
+    </root>
+  </artifact>
+</component>

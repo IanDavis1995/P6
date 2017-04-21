@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">HashcatFrontend</string>
+    <string name="run_ssh_button">Run SSH</string>
+    <string name="upload_path_hashes">Hashes Path</string>
+    <string name="upload_path_passwords">Password Path</string>
+    <string name="upload_path_words">rockyou.txt</string>
+    <string name="hash_path_file">hashes-md5.txt</string>
+    <string name="results_view">Hashcat Results</string>
+</resources>

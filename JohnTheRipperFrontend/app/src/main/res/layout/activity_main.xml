@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ian.ceg3900.edu.johntheripperfrontend.MainActivity">
+
+    <Button
+        android:id="@+id/run_john_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/run_john_button"/>
+
+    <TextView
+        android:id="@+id/session_1_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/run_john_button"
+        android:layout_marginTop="20dp"
+        android:text="@string/session_1_title"
+        android:scrollbars="vertical"
+        android:maxLines="7"/>
+
+    <TextView
+        android:id="@+id/session_2_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/session_1_output"
+        android:layout_marginTop="20dp"
+        android:text="@string/session_2_title"
+        android:scrollbars="vertical"
+        android:maxLines="7"/>
+
+    <TextView
+        android:id="@+id/session_3_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/session_2_output"
+        android:layout_marginTop="20dp"
+        android:text="@string/session_3_title"
+        android:scrollbars="vertical"
+        android:maxLines="7"/>
+
+    <TextView
+        android:id="@+id/session_4_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/session_3_output"
+        android:layout_marginTop="20dp"
+        android:text="@string/session_4_title"
+        android:scrollbars="vertical"
+        android:maxLines="7"/>
+
+</RelativeLayout>

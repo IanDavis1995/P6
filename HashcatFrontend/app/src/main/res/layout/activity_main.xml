@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ian.hashcatfrontend.MainActivity">
+
+    <TextView
+        android:id="@+id/upload_hashes_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:labelFor="@+id/upload_path_hashes"
+        android:text="@string/upload_path_hashes"/>
+    <EditText
+        android:id="@+id/upload_path_hashes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:text="@string/hash_path_file"/>
+
+    <TextView
+        android:id="@+id/upload_words_labels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upload_path_hashes"
+        android:layout_marginTop="10dp"
+        android:labelFor="@+id/upload_path_words"
+        android:text="@string/upload_path_passwords"/>
+    <EditText
+        android:id="@+id/upload_path_words"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upload_path_hashes"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:text="@string/upload_path_words"/>
+
+    <Button
+        android:id="@+id/run_ssh_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upload_path_words"
+        android:layout_marginTop="10dp"
+        android:text="@string/run_ssh_button"/>
+
+    <TextView
+        android:id="@+id/results_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/run_ssh_button"
+        android:text="@string/results_view"/>
+</RelativeLayout>

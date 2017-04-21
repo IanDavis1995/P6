@@ -1,0 +1,169 @@
+## nothing, reverse, case... base stuff
+: ## no-op
+r ## reverse all letters of word
+u ## convert to uppercase
+T0 ## Toggle case of character 0
+
+## simple number append
+## Try appending all digits 0-9 to the password
+$0
+$1
+$2
+$3
+$4
+$5
+$6
+$7
+$8
+$9
+
+## special number append
+## Try special number combinations
+$0 $0
+$0 $1
+$0 $2
+$1 $1
+$1 $2
+$1 $3
+$2 $1
+$2 $2
+$2 $3
+$6 $9
+$7 $7
+$8 $8
+$9 $9
+$1 $2 $3
+
+## high frequency append
+## Try appending e and s to word
+$e
+$s
+
+## high frequency overwrite at end
+## Replace last character with an a
+] $a
+## Remove last 2 characters and append an s
+] ] $s
+## Remove last 2 characters and append an a
+] ] $a
+## Remove last 2 characters and append er
+] ] $e $r
+## Remove last 2 characters and append ie
+] ] $i $e
+## Remove last 2 characters and append an o
+] ] ] $o
+## Remove last 2 characters and append an y
+] ] ] $y
+## Remove last 2 characters and append 123
+] ] ] $1 $2 $3
+## Remove last 2 characters and append man
+] ] ] $m $a $n
+## Remove last 2 characters and append dog
+] ] ] $d $o $g
+
+## high frequency prepend
+## Prepend a 1 to beginning of password
+^1
+# Prepend the to password
+^e ^h ^t
+
+## high frequency overwrite at start
+## Replace the character at position 0 with d
+o0d
+## Replace the character at position 0 with m and position 1 with a
+o0m o1a
+
+## leetify
+## Replace all o's with 0's
+so0
+## Replace all i's with 1's
+si1
+## Replace all e's with 3's
+se3
+
+## simple extracts
+## Delete the second character
+D2
+## Delete the second and third character
+D2 D2
+## Delete the third character
+D3
+## Delete the fourth character
+D4
+
+## undouble word
+## Truncate everything past the 5th position in the word,
+## then delete the third character in the word
+'5 D3
+## Truncate everything past the 5th position in the word,
+## then append a 1
+'5 $1
+
+## removes suffixes from 'strongified' passwords in dict
+## Remove the last character from the word
+]
+## Remove the last two characters from the word
+] ]
+## Remove the last three characters from the word
+] ] ]
+## Remove the last three characters from the word, then duplicate it
+] ] ] d
+## Remove the last two characters, delete the first character from the result,
+## then remove another last character
+] ] D1 ]
+
+## rotates
+## Increment the fifth character by one ASCII value,
+## Remove the last character, rotate right 4 times, and truncate to the 4th character.
++5 ] } } } } '4
+## Extract just the first two chracters, and rotate left 5 times
+x02 { { { { { {
+## Rotate right once, remove the last two characters, then rotate left
+} ] ] {
+## Rotate right twice, decrement the character at 0 by one ascii value,
+## then extract from the 1st to the 12th character
+} } -0 x12
+## Rotate right 3 times
+} } }
+## Rotate right 4 times, then truncate to the 4th character.
+} } } } '4
+## Rotate right 5 times, then truncate to the 5 characters.
+} } } } } '5
+## Rotate right 6 times, then duplicate the last 4 characters,
+## truncate to the 4th character, and duplicate the entire word.
+} } } } } } Y4 '4 d
+
+## unknown
+## Swap the first character with the fourth,
+## increment the first character by one ascii value, and truncate after the 4th character.
+*04 +0 '4
+## Swap the first character with the fifth, extract the first through fourth characters,
+## duplicate the word, truncate after the 3rd character, and append the duplicated word again.
+*05 x03 d '3 p1
+## Increment the first character's ascii value by 7
++0 +0 +0 +0 +0 +0 +0 +0
+## Increment the first character's ascii value by 3,
+## and extract the 2nd to the 12th characters.
++0 +0 +0 x12
+## Duplicate the last character 4 times, truncate to the 8th character,
+## Then extract characters from 4-2 (looping around)
+Z4 '8 x42
+## Duplicate the last character 5 times, truncate to the 6th character,
+## Extract characters from 3-1 (looping around), delete the last character,
+## Then append a duplicate of the word to the end.
+Z5 '6 x31 ] p1
+## Duplicate the last character 5 times, swap the 7th character with the 5th character,
+## Truncate to the 5th character, rotate left once, and extract the first 2 characters.
+Z5 *75 '5 { x02
+## Duplicate the word, extract characters from 2-8, duplicate the last 4 characters,
+## And duplicate the word again.
+d x28 Y4 '4 d
+## Duplicate the word reversed, Swap the 10th character with the 5th,
+## truncate to the 8th character, and extract characters 1-4
+f *A5 '8 x14
+## Append a duplicate to the word twice, truncate to the 7th character,
+## append a duplicate to the word once, then extract characters 5-8.
+p2 '7 p1 x58
+## Extract characters 1-4, duplicate the word, append a duplicated word twice,
+## And truncate to the 6th character.
+x14 d p2 '6

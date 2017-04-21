@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">JohnTheRipperFrontend</string>
+    <string name="session_1_title">Session 1\n</string>
+    <string name="session_2_title">Session 2\n</string>
+    <string name="session_3_title">Session 3\n</string>
+    <string name="session_4_title">Session 4\n</string>
+    <string name="run_john_button">Run John</string>
+</resources>
